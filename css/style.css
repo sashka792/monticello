@@ -584,7 +584,24 @@ input[type="submit"],
 input[type="button"],
 button,
 .ba-button {
-  display: inline-block; }
+  display: inline-block;
+  padding: 20px 41px;
+  border: 1px solid #2c4058;
+  background: transparent;
+  text-transform: uppercase;
+  color: #2c4058;
+  font-family: 'Gotham-Book';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 60px;
+  margin-top: 36px; }
+  input[type="submit"]:hover,
+  input[type="button"]:hover,
+  button:hover,
+  .ba-button:hover {
+    background-color: #2c4058;
+    color: #fff; }
 
 input[type="text"],
 input[type="email"],
@@ -608,6 +625,9 @@ select {
   src: url("../fonts/Gotham-Bold.woff2") format("woff2"), url("../fonts/Gotham-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
 
 .ba-section-title::before {
   content: '';
@@ -647,15 +667,30 @@ select {
 
 .ba-menu__item {
   list-style: none;
-  margin: 0 90px 0 0; }
+  margin: 0 90px 0 0;
+  position: relative; }
 
 .ba-menu__item a {
   text-decoration: none;
   color: #fff; }
 
+.ba-menu__item a:before {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -15px; }
+
 .fab {
   color: #fff;
-  margin: 15px auto;
+  margin: 15px;
   position: relative; }
 
 .fab::after {
@@ -664,7 +699,12 @@ select {
   height: 40px;
   border: 1px #fff solid;
   border-radius: 50%;
-  position: absolute; }
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%); }
 
 .ba-main-title {
   margin-top: 263px;
@@ -675,7 +715,8 @@ select {
   font-weight: 700;
   line-height: 22px;
   text-transform: uppercase;
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  margin-bottom: 40px; }
 
 .ba-subtitle {
   text-align: center;
@@ -689,6 +730,21 @@ select {
   margin-bottom: 230px; }
 
 /* Projects */
+.project-subtitle {
+  font-family: "Gotham-Book", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #2c4058; }
+
+.project-title {
+  font-family: "Gotham-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 24.01px;
+  text-transform: uppercase;
+  color: #2c4058; }
+
 /* News */
 /* Gallery */
 /* Contact */

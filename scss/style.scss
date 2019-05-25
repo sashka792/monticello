@@ -20,8 +20,12 @@
 
 $main-font: 'Gotham-Bold', sans-serif;
 $ba-subtitle: 'Gotham-Book', sans-serif;
+$text: 'Open Sans', sans-serif;
 body{
 
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
 }
 .ba-section-title::before{
 	content: '';
@@ -63,6 +67,7 @@ body{
 .ba-menu__item{
 	list-style: none;
 	margin: 0 90px 0 0;
+	position:relative
 }
 
 .ba-menu__item a{
@@ -70,19 +75,34 @@ body{
 	color: #fff;
 }
 
-.fab{
-	color: #fff;
-	margin: 15px auto;
-	position: relative;
+.ba-menu__item a:before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
 }
 
-.fab::after{
-	content: '';
-	width: 40px;
+.fab {
+    color: #fff;
+    margin: 15px;
+    position: relative;
+}
+.fab::after {
+    content: '';
+    width: 40px;
     height: 40px;
-	border: 1px #fff solid;
-	border-radius: 50%;
-	position: absolute;
+    border: 1px #fff solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
 }
 
 .ba-main-title{
@@ -95,6 +115,7 @@ body{
 	line-height: 22px;
 	text-transform: uppercase;
 	letter-spacing: 4px;
+	margin-bottom: 40px;
 }
 .ba-subtitle{
 	text-align: center;
@@ -109,6 +130,21 @@ body{
 }
 
 /* Projects */
+.project-subtitle{
+	font-family: $ba-subtitle;
+	font-size: 22px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color:#2c4058;
+}
+.project-title{
+	font-family: $main-font;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 24.01px;
+	text-transform: uppercase;
+	color:#2c4058;
+}
 /* News */
 /* Gallery */
 /* Contact */
